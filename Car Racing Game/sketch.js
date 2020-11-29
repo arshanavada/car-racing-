@@ -1,7 +1,7 @@
 var gmstate="main",blackcarside,blackcarrace,orangecarside,orangecarrace,redcarside,redcarrace;
 var sedancarside,sedancarrace,silvercarside,silvercarrace,smallcarside,smallcarrace;
-var smalfastcarside,smallfastcarrace;
-var player,play,background;
+var smalfastcarside,smallfastcarrace,firstcarside,firstcarrace,policecarside,policecarrace;
+var player,play,background,mainscreen;
 
 function preload()
 {
@@ -19,7 +19,12 @@ silvercarside=loadImage("Silver car side.png");
 silvercarrace=loadImage("Silver car race.png");
 smallcarside=loadImage("Small car side.png ");
 smallcarrace=loadImage("Small car race.png");
+firstcarrace=loadImage("first car race.png");
+firstcarside=loadImage("first car side.png");
+policecarrace=loadImage("police car race.png")
+policecarside=loadImage("police car side.png")
  play=loadImage("play.png");
+ mainscreen=loadImage("main screen pic.png");
 }
 
 function setup() {
@@ -32,10 +37,10 @@ function draw()
   if(gmstate==="main")
   {
    background=createSprite(900,700);
-   background.addImage("main screen car.png");
+   background.addImage("main screen",mainscreen);
 
-    play = createSprite(width-70, height-70, 20, 20);
-    play.addImage("play.png",play);
+    //play = createSprite(width-70, height-70, 20, 20);
+    //play.addImage("play.png",play);
     if(MousePressedOver(play))
     {
       gmstate="chooseplay";
